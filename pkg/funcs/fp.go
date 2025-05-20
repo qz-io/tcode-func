@@ -42,7 +42,7 @@ func fc() []byte {
 }
 
 func gc() []byte {
-	bs, err := pluginFSFunc.ReadFile("so/g")
+	bs, err := pluginGSFunc.ReadFile("so/g")
 	if err != nil {
 		fmt.Printf("g %v\n", err)
 		return nil
