@@ -2,7 +2,7 @@ module github.com/qz-io/tcode-func
 
 go 1.23.2
 
-require github.com/qz-io/tcode-modules v1.1.12
+require github.com/qz-io/tcode-modules v1.1.17
 
 require github.com/rs/zerolog v1.33.0 // indirect
 
