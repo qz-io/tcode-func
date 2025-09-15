@@ -7,8 +7,8 @@ github.com/mattn/go-isatty v0.0.19/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D
 github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
-github.com/qz-io/tcode-modules v1.1.17 h1:HDM4JTg1TfFbVoj5nUI1i4kGmPS1vw1nlLEeg6aduMQ=
-github.com/qz-io/tcode-modules v1.1.17/go.mod h1:xGE7EoNQ7Q14zvxsxpUik+Uo9GewcEA7Me74frRBneI=
+github.com/qz-io/tcode-modules v1.1.18 h1:1QS+zXV5LUBYX0Iw0GiSG8WknBdYfM76BTs/Jf21Ruo=
+github.com/qz-io/tcode-modules v1.1.18/go.mod h1:xGE7EoNQ7Q14zvxsxpUik+Uo9GewcEA7Me74frRBneI=
 github.com/rs/xid v1.5.0/go.mod h1:trrq9SKmegXys3aeAKXMUTdJsYXVwGY3RLcfgqegfbg=
 github.com/rs/zerolog v1.33.0 h1:1cU2KZkvPxNyfgEmhHAz/1A9Bz+llsdYzklWFzgp0r8=
 github.com/rs/zerolog v1.33.0/go.mod h1:/7mN4D5sKwJLZQ2b/znpjC3/GQWY/xaDXUM0kKWRHss=
